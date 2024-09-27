@@ -10,7 +10,7 @@ import SwiftUI
 struct AboutView: View {
     var body: some View {
         VStack {
-            Text("Cheryl Lau: A")
+            Text("Cheryl Lau: A00866773")
             Text("Conrad Christian: A01069532")
         }
     }

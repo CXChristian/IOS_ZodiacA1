@@ -15,7 +15,7 @@ struct ContentView: View {
                 Text("Home")
             }.tag(1)
             CalculatorView().tabItem {
-                Image(systemName: "map")
+                Image(systemName: "calculator")
                 Text("Calculator")
             }.tag(2)
             AboutView().tabItem {
@@ -28,4 +28,4 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-}
+}	
