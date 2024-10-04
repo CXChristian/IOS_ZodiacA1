@@ -103,6 +103,33 @@ class Zodiacs: NSObject {
                         Knowledge is key to these folks since it fuels their broad-minded approach to life. Those born with a Sagittarius zodiac sign are keenly interested in philosophy and religion, and they find that these disciplines aid their internal quest. At the end of the day, what Sagittarius wants most is to know the meaning of life, and to accomplish this while feeling free and easy.
                         """
                   ),
+        ZodiacData(id: 10, name: "Capricorn", icon: "♑", date: "Dec 22 - Jan 19",
+                   desc:"""
+                        Ruled by Saturn, Capricorn is tasked with the karmic duties of time, lessons, and authority. No other sign can shoulder the weight of the world as Capricorn can. So, it's no surprise that Capricorn is expressed as the Sea-Goat or Goat. Much like a goat clinging to the mountainside, Capricorn will tenaciously persevere.
+                        
+                        Capricorn, the tenth sign and mountain goat of the zodiac, is all about hard work. Those born under this sign are more than happy to put in a full day at the office, realizing that it will likely take a lot of those days to get to the top. That's no problem, since Capricorns are both ambitious and determined: they will get there. Life is one big project for these folks, and they adapt to this by adopting a businesslike approach to most everything they do.
+                        
+                        Capricorns are practical as well, taking things one step at a time and being as realistic and pragmatic as possible. Those with a Capricorn zodiac sign are extremely dedicated to their goals, almost to the point of stubbornness. Those victories sure smell sweet, though, and that thought alone will keep Capricorns going.
+                        """
+                  ),
+        ZodiacData(id: 11, name: "Aquarius", icon: "♒️", date: "Jan 20 - Feb 18",
+                   desc:"""
+                        Aquarius is a technological sign, preferring both the structure of Saturn and the unconventionality of rebellious Uranus. To amplify Aquarius' quirkiness, it's represented as the Water-Bearer. Surprisingly, Aquarius is highly empathetic but shielded by a cold front. Aquarius wants to better the collective but is also highly selective with personal relationships. No matter what, Aquarius tends to shine in its individualism.
+                        
+                        Aquarius is the eleventh sign of the zodiac, and Aquarians are the perfect representatives for the Age of Aquarius. Those born under this horoscope sign have the social conscience needed to carry us into the new millennium. Those of the Aquarius zodiac sign are humanitarian, philanthropic, and keenly interested in making the world a better place. Along those lines, they'd like to make the world work better, which is why they focus much of their energy on our social institutions and how they work (or don't work).
+                        
+                        Aquarians are visionaries, progressive souls who love to spend time thinking about how things can be better. They are also quick to engage others in this process, which is why they have so many friends and acquaintances. Making the world a better place is a collaborative effort for Aquarians.
+                        """
+                  ),
+        ZodiacData(id: 12, name: "Pisces", icon: "♓️", date: "Feb 19 - Mar 20",
+                   desc:"""
+                        Graced with water attributes, Pisces has this eclectic magic, gifted with psychic receptivity and scarily accurate intuition. Jupiter tends to magnify these qualities, but Neptune also tends to delude them with a dreamy confusion. Represented by two Fish swimming in synchronicity, Pisces is the reminder to consider the known and unknown.
+                        
+                        Pisces is a mutable, feminine water sign, co-ruled by Jupiter and Neptune. It's associated with the Twelfth House of the subconscious, hidden talents/weaknesses, and self-undoing. Pisces weaves in and out of conscious reality thanks to its mystical mutability.
+                        
+                        Graced with water attributes, Pisces has this eclectic magic, gifted with psychic receptivity and scarily accurate intuition. Jupiter tends to magnify these qualities, but Neptune also tends to delude them with a dreamy confusion. Represented by two Fish swimming in synchronicity, Pisces is the reminder to consider the known and unknown.
+                        """
+                  ),
     ]
 
 }
