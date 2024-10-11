@@ -15,7 +15,7 @@ struct ContentView: View {
                 Text("Home")
             }.tag(1)
             CalculatorView().tabItem {
-                Image(systemName: "calculator")
+                Image(systemName: "calendar")
                 Text("Calculator")
             }.tag(2)
             AboutView().tabItem {

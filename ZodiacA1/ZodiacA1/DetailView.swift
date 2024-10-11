@@ -10,10 +10,12 @@ import SwiftUI
 struct DetailView: View {
     var data: ZodiacData
     var body: some View {
-        Text(data.name)
-        Text(data.date)
-        Image(data.name.lowercased())
-        Text(data.desc)
+        ScrollView{
+            Text(data.name).bold()
+            Text(data.date)
+            Image(data.name.lowercased())
+            Text(data.desc)
+        }.padding()
     }
 }
 

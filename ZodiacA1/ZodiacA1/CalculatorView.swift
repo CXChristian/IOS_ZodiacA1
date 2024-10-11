@@ -12,31 +12,22 @@ struct CalculatorView: View {
     @State var day: String = ""
     @State var zodiac: ZodiacData = Zodiacs.data[0]
     @State var selectedDate = Date()
-    @State var zodiacSelected = false
-
-    
     @State var components = DateComponents()
-    
+    @State var path = NavigationPath()
+
     var body: some View {
-        NavigationView {
-        VStack {
-            DatePicker("Select a date", selection: $selectedDate, displayedComponents: .date)
-                .datePickerStyle(GraphicalDatePickerStyle())
-                .padding()
-            Button("Get Sign"){
-                zodiac = zodiacSign(for: selectedDate)
-                zodiacSelected = true
-            }
-            
-            
-            if zodiacSelected {
-                
-                
-                    List() {
-                        NavigationLink(zodiac.name, destination: DetailView(data: zodiac))
+        NavigationStack(path: $path){
+            VStack {
+                DatePicker("Select a date", selection: $selectedDate, displayedComponents: .date)
+                    .datePickerStyle(GraphicalDatePickerStyle())
+                    .padding()
+                    Button("Get Sign"){
+                        zodiac = zodiacSign(for: selectedDate)
+                        path.append(zodiac)
                     }
-            
-            }
+                    .navigationDestination(for: ZodiacData.self) { zodiac in
+                        DetailView(data: zodiac)
+                    }
             }
         }
     }
