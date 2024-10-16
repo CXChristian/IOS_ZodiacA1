@@ -15,7 +15,11 @@ struct DetailView: View {
             Text(data.date)
             Image(data.name.lowercased())
             Text(data.desc)
-        }.padding()
+        }
+        .padding()
+        .background(
+            LinearGradient(gradient: Gradient(colors: [.red, .yellow]), startPoint: .topLeading, endPoint: .bottomTrailing)
+        )
     }
 }
 

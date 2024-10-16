@@ -23,6 +23,7 @@ struct ContentView: View {
                 Text("About")
             }.tag(3)
         }
+        .accentColor(.black)
     }
 }
 

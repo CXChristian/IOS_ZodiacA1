@@ -14,23 +14,31 @@ struct CalculatorView: View {
     @State var selectedDate = Date()
     @State var components = DateComponents()
     @State var path = NavigationPath()
-
+    
     var body: some View {
-        NavigationStack(path: $path){
-            VStack {
-                DatePicker("Select a date", selection: $selectedDate, displayedComponents: .date)
-                    .datePickerStyle(GraphicalDatePickerStyle())
-                    .padding()
-                    Button("Get Sign"){
+        NavigationStack(path: $path) {
+            ZStack {
+                LinearGradient(gradient: Gradient(colors: [.red, .purple]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .ignoresSafeArea()
+                VStack {
+                    DatePicker("Select a date", selection: $selectedDate, displayedComponents: .date)
+                        .datePickerStyle(GraphicalDatePickerStyle())
+                        .padding()
+                    Button("Get Sign") {
                         zodiac = zodiacSign(for: selectedDate)
                         path.append(zodiac)
                     }
                     .navigationDestination(for: ZodiacData.self) { zodiac in
                         DetailView(data: zodiac)
+                        
                     }
+                }
             }
         }
+        .accentColor(Color.ICON)
+        
     }
+    
     
     func zodiacSign(for date: Date) -> ZodiacData {
         let calendar = Calendar.current
