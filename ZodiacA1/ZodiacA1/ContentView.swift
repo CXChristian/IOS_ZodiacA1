@@ -6,13 +6,16 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ContentView: View {
     var body: some View {
         TabView {
             HomeView().tabItem {
                 Image(systemName: "house")
+                
                 Text("Home")
+                
             }.tag(1)
             CalculatorView().tabItem {
                 Image(systemName: "calendar")
@@ -23,10 +26,18 @@ struct ContentView: View {
                 Text("About")
             }.tag(3)
         }
-        .accentColor(.black)
+        .accentColor(Color.SELECTED_TAB)
+        .onAppear(perform: {
+            UITabBar.appearance().unselectedItemTintColor = UIColor(Color.ICON.opacity(0.4))
+            UITabBar.appearance().backgroundColor = .systemGray4.withAlphaComponent(0.1)
+            UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.systemPink]
+        })
+        
+        
+        
     }
 }
 
 #Preview {
     ContentView()
-}	
+}

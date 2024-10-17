@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 extension Color {
-    static let BACK_COLOUR = Color("Background")
+    static let SELECTED_TAB = Color("SelectedTab")
     static let ICON = Color("Icon")
     static let TEXT = Color("Text")
 }

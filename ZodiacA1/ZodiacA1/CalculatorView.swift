@@ -18,21 +18,25 @@ struct CalculatorView: View {
     var body: some View {
         NavigationStack(path: $path) {
             ZStack {
-                LinearGradient(gradient: Gradient(colors: [.red, .purple]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                LinearGradient(gradient: Gradient(colors: [.purple, .black]), startPoint: .topLeading, endPoint: .bottomTrailing)
                     .ignoresSafeArea()
                 VStack {
                     DatePicker("Select a date", selection: $selectedDate, displayedComponents: .date)
                         .datePickerStyle(GraphicalDatePickerStyle())
                         .padding()
+                        .colorScheme(.dark)
+                        
                     Button("Get Sign") {
                         zodiac = zodiacSign(for: selectedDate)
                         path.append(zodiac)
                     }
                     .navigationDestination(for: ZodiacData.self) { zodiac in
                         DetailView(data: zodiac)
+                
                         
                     }
                 }
+                
             }
         }
         .accentColor(Color.ICON)
